@@ -1,20 +1,24 @@
+import { Router } from '@reach/router';
 import * as React from 'react';
-import './App.css';
-
-import logo from './logo.svg';
-
+import About from './pages/About';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Products from './pages/Products';
+import Product from './pages/Product';
+import Cart from './pages/Cart';
+import Contact from './pages/Contact';
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <Home path="/" />
+        <About path="/about" />
+        <Products path="/products" />
+        <Product path="/product/:productId" />
+        <Contact path="/contact" />
+        <Cart path="/cart" />
+        <NotFound default={true} />
+      </Router>
     );
   }
 }
