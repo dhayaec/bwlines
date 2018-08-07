@@ -31,7 +31,7 @@ class Home extends React.Component<HomeProps & RouteComponentProps, HomeState> {
     await this.loadJoke();
   }
 
-  renderJoke(): JSX.Element {
+  renderJoke = () => {
     const { joke, loading } = this.state;
     if (loading) {
       return <p>Loading ...</p>;
