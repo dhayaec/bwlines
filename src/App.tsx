@@ -14,7 +14,7 @@ class App extends React.Component {
         <Home path="/" />
         <About path="/about" />
         <Products path="/products" />
-        <Product path="/product/:productId" />
+        <Product path="/products/:productId" />
         <Contact path="/contact" />
         <Cart path="/cart" />
         <NotFound default={true} />

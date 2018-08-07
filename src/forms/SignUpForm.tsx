@@ -69,7 +69,7 @@ const SignUpForm = withFormik<SignUpFormProps, FormValues>({
       .min(6, 'Password should be 6 chars long'),
   }),
 
-  handleSubmit: values => {
+  handleSubmit: async values => {
     console.log(values);
   },
 })(FormComponent);

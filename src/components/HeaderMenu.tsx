@@ -1,29 +1,47 @@
 import * as React from 'react';
-import { Link } from '@reach/router';
+import NavLink from '../ui/NavLink';
 
 interface HeaderMenuProps {}
 
 interface HeaderMenuState {}
 
+const links: LinkOptions[] = [
+  {
+    id: 1,
+    name: 'Home',
+    link: '/',
+  },
+  {
+    id: 2,
+    name: 'About',
+    link: '/about',
+  },
+  {
+    id: 3,
+    name: 'Contact',
+    link: '/contact',
+  },
+  {
+    id: 4,
+    name: 'Products',
+    link: '/products',
+  },
+  {
+    id: 5,
+    name: 'Cart',
+    link: '/cart',
+  },
+];
+
 class HeaderMenu extends React.PureComponent<HeaderMenuProps, HeaderMenuState> {
   public render(): JSX.Element {
     return (
       <ul style={{ listStyle: 'inline' }}>
-        <li>
-          <Link to="/" children="Home" />
-        </li>
-        <li>
-          <Link to="/about" children="About" />
-        </li>
-        <li>
-          <Link to="/contact" children="Contact" />
-        </li>
-        <li>
-          <Link to="/products" children="Products" />
-        </li>
-        <li>
-          <Link to="/cart" children="Cart" />
-        </li>
+        {links.map(item => (
+          <li key={item.id}>
+            <NavLink to={item.link} children={item.name} />
+          </li>
+        ))}
       </ul>
     );
   }

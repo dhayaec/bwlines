@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { RouteComponentProps, Link } from '@reach/router';
 import HeaderMenu from '../components/HeaderMenu';
+import products from '../data/products';
 
 interface ProductsProps {}
 
@@ -16,7 +17,14 @@ class Products extends React.Component<
         <HeaderMenu />
         <h1>Hello Products</h1>
         <h2>Welcome to my website</h2>
-        <Link to="/product/123" children="Product 123" />
+        <ul>
+          {products.length > 0 &&
+            products.map(item => (
+              <li key={item.id}>
+                <Link to={`/products/${item.id}`} children={item.name} />
+              </li>
+            ))}
+        </ul>
       </div>
     );
   }
