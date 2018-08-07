@@ -1,8 +1,8 @@
-import * as React from 'react';
 import { RouteComponentProps } from '@reach/router';
-import HeaderMenu from '../components/HeaderMenu';
+import * as React from 'react';
 import { getRandomJoke } from '../api/random-jokes';
 import DumbComponent from '../components/DumbComponent';
+import HeaderMenu from '../components/HeaderMenu';
 
 interface HomeProps {}
 

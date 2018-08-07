@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { FormikErrors, FormikTouched, FormikValues } from 'formik';
+import * as React from 'react';
 
 const errorStyle: React.CSSProperties = {
   color: 'red',

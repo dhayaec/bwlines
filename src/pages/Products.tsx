@@ -1,5 +1,5 @@
+import { Link, RouteComponentProps } from '@reach/router';
 import * as React from 'react';
-import { RouteComponentProps, Link } from '@reach/router';
 import HeaderMenu from '../components/HeaderMenu';
 import products from '../data/products';
 

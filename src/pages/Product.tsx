@@ -1,8 +1,8 @@
-import * as React from 'react';
 import { RouteComponentProps } from '@reach/router';
+import { normalize, schema } from 'normalizr';
+import * as React from 'react';
 import HeaderMenu from '../components/HeaderMenu';
 import productsList from '../data/products';
-import { normalize, schema } from 'normalizr';
 
 const productEntity = new schema.Entity('products');
 

@@ -1,5 +1,10 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint-eslint-rules",
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
   },
@@ -9,7 +14,7 @@
     "arrow-return-shorthand": [false],
     "comment-format": [true, "check-space"],
     "import-blacklist": [true, "rxjs"],
-    "interface-over-type-literal": false,
+    "interface-over-type-literal": true,
     "interface-name": false,
     "max-line-length": [true, 120],
     "member-access": false,
@@ -29,12 +34,11 @@
     "object-literal-shorthand": false,
     "one-variable-per-declaration": [false],
     "only-arrow-functions": [true, "allow-declarations"],
-    "ordered-imports": [false],
+    "ordered-imports": [true],
     "prefer-method-signature": false,
     "prefer-template": [true, "allow-single-concat"],
     "quotemark": [true, "single", "jsx-double"],
     "semicolon": [true, "always"],
-    "organize-import": true,
     "trailing-comma": [
       true,
       {
@@ -59,6 +63,6 @@
       "allow-leading-underscore"
     ],
     // tslint-react
-    "jsx-no-lambda": false
+    "jsx-no-lambda": true
   }
 }

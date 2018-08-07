@@ -1,7 +1,7 @@
 import { RouteComponentProps } from '@reach/router';
 import * as React from 'react';
-import User from '../components/User';
 import HeaderMenu from '../components/HeaderMenu';
+import User from '../components/User';
 
 interface CartProps {}
 interface CartState {

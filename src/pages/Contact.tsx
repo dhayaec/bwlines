@@ -1,7 +1,7 @@
-import * as React from 'react';
-import SignUpForm from '../forms/SignUpForm';
 import { RouteComponentProps } from '@reach/router';
+import * as React from 'react';
 import HeaderMenu from '../components/HeaderMenu';
+import SignUpForm from '../forms/SignUpForm';
 
 interface ContactProps {}
 

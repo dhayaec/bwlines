@@ -1,5 +1,5 @@
-import * as React from 'react';
 import { RouteComponentProps } from '@reach/router';
+import * as React from 'react';
 import HeaderMenu from '../components/HeaderMenu';
 
 interface AboutProps {}
