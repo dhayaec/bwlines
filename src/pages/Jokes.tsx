@@ -8,12 +8,7 @@ interface JokesProps {
   categoryName?: string;
 }
 
-interface JokesState {}
-
-class Jokes extends React.Component<
-  JokesProps & RouteComponentProps,
-  JokesState
-> {
+class Jokes extends React.Component<JokesProps & RouteComponentProps> {
   state = {
     joke: {} as JokeResponse,
     loading: false,

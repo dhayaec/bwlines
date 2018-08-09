@@ -16,7 +16,7 @@ class Cart extends React.Component<CartProps & RouteComponentProps, CartState> {
       { id: 3, name: 'Bob' },
       { id: 4, name: 'Nan' },
       { id: 5, name: 'Sam' },
-    ],
+    ] as UserObject[],
   };
 
   renderUser = (user: UserObject) => {

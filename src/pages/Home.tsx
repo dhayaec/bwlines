@@ -6,9 +6,7 @@ import HeaderMenu from '../components/HeaderMenu';
 
 interface HomeProps {}
 
-interface HomeState {}
-
-class Home extends React.Component<HomeProps & RouteComponentProps, HomeState> {
+class Home extends React.Component<HomeProps & RouteComponentProps> {
   state = {
     joke: {} as JokeResponse,
     loading: false,

@@ -7,12 +7,7 @@ import productsList from '../data/productsList';
 
 interface ProductsProps {}
 
-interface ProductsState {}
-
-class Products extends React.Component<
-  ProductsProps & RouteComponentProps,
-  ProductsState
-> {
+class Products extends React.Component<ProductsProps & RouteComponentProps> {
   state = {
     loading: false,
     categories: [],
