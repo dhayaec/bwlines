@@ -1,5 +1,6 @@
 import * as React from 'react';
 import NavLink from '../ui/NavLink';
+import SearchBox from './SearchBox';
 
 interface HeaderMenuProps {}
 
@@ -36,13 +37,17 @@ const links: LinkOptions[] = [
 class HeaderMenu extends React.PureComponent<HeaderMenuProps, HeaderMenuState> {
   public render(): JSX.Element {
     return (
-      <ul style={{ listStyle: 'inline' }}>
-        {links.map(item => (
-          <li key={item.id}>
-            <NavLink to={item.link} children={item.name} />
-          </li>
-        ))}
-      </ul>
+      <div>
+        <ul style={{ listStyle: 'inline' }}>
+          {links.map(item => (
+            <li key={item.id}>
+              <NavLink to={item.link} children={item.name} />
+            </li>
+          ))}
+        </ul>
+        <br />
+        <SearchBox />
+      </div>
     );
   }
 }

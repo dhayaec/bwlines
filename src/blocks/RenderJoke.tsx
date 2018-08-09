@@ -14,11 +14,11 @@ class RenderJoke extends React.PureComponent<RenderJokeProps> {
     if (joke.value !== '') {
       return (
         <div>
-          <p>{joke.value}</p>
           <p>
             <img src={joke.icon_url} alt={joke.value} />
           </p>
-          <p>{joke.value}</p>
+          <blockquote>{joke.value}</blockquote>
+          {joke.category && <i>{joke.category}</i>}
           <p>{joke.id}</p>
         </div>
       );

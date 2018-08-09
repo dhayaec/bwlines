@@ -7,7 +7,7 @@ interface RenderCategoriesProps {
 }
 
 class RenderCategories extends React.PureComponent<RenderCategoriesProps> {
-  public render(): JSX.Element {
+  public render() {
     const { categories, loading } = this.props;
     if (loading) {
       return <p>Loading...</p>;
@@ -28,7 +28,7 @@ class RenderCategories extends React.PureComponent<RenderCategoriesProps> {
         </div>
       );
     }
-    return <span />;
+    return <span>No Categories</span>;
   }
 }
 
