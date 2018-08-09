@@ -70,6 +70,7 @@ const SignUpForm = withFormik<SignUpFormProps, FormValues>({
   }),
 
   handleSubmit: async values => {
+    // tslint:disable-next-line:no-console
     console.log(values);
   },
 })(FormComponent);
