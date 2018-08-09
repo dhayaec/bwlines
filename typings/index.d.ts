@@ -20,3 +20,7 @@ interface UserObject {
   id: number;
   name: string;
 }
+
+interface JokeGetProps {
+  category?: string;
+}
