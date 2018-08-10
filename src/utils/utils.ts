@@ -9,3 +9,9 @@ export const getType = (v: any): string => {
   }
   return v.constructor.name.toLowerCase();
 };
+
+export const throwError = (e: any) => {
+  // tslint:disable-next-line:no-console
+  console.log(e);
+  throw new Error(e);
+};
