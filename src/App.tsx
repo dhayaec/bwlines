@@ -8,6 +8,7 @@ import Jokes from './pages/Jokes';
 import NotFound from './pages/NotFound';
 import Product from './pages/Product';
 import Products from './pages/Products';
+
 class App extends React.Component {
   public render() {
     return (
