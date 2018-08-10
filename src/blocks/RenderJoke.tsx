@@ -2,12 +2,12 @@ import * as React from 'react';
 
 interface RenderJokeProps {
   joke: JokeResponse;
-  loading: boolean;
+  loading?: boolean;
 }
 
 class RenderJoke extends React.PureComponent<RenderJokeProps> {
   public render(): JSX.Element {
-    const { joke, loading } = this.props;
+    const { joke, loading = false } = this.props;
     if (loading) {
       return <p>Loading ...</p>;
     }

@@ -21,6 +21,23 @@ interface UserObject {
   name: string;
 }
 
-interface JokeGetProps {
+interface JokeGetArgs {
   category?: string;
+}
+
+interface JokeSearchArgs {
+  q?: string;
+}
+
+interface JokesList {
+  total: number;
+  result: JokeResponse[];
+}
+
+interface JokeResponse {
+  category?: null;
+  icon_url: string;
+  id: string;
+  url: string;
+  value: string;
 }

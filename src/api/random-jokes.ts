@@ -1,6 +1,6 @@
 import { CATEGORIES_CACHE_KEY, JOKES_API_HOST } from './../config';
 
-export function getRandomJoke({ category = '' }: JokeGetProps = {}): Promise<
+export function getRandomJoke({ category = '' }: JokeGetArgs = {}): Promise<
   JokeResponse
 > {
   const filter = category ? '?category=' + category : '';
@@ -41,4 +41,13 @@ export function getJokeCategories(): Promise<string[]> {
     console.log(error);
   }
   return new Promise(resolve => resolve([]));
+}
+
+export function searchJokes({ q }: JokeSearchArgs): Promise<JokesList> {
+  return (
+    fetch(`${JOKES_API_HOST}/jokes/search?query=${q}`)
+      .then(res => res.json())
+      // tslint:disable-next-line:no-console
+      .catch(e => console.log(e))
+  );
 }
