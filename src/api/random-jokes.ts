@@ -1,5 +1,5 @@
+import { CATEGORIES_CACHE_KEY, JOKES_API_HOST } from '../config';
 import { throwError } from '../utils/utils';
-import { CATEGORIES_CACHE_KEY, JOKES_API_HOST } from './../config';
 
 export function getRandomJoke({ category = '' }: JokeGetArgs = {}): Promise<
   JokeResponse

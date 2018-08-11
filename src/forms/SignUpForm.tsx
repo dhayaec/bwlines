@@ -1,7 +1,7 @@
 import { Field, Form, FormikProps, withFormik } from 'formik';
 import * as React from 'react';
 import * as Yup from 'yup';
-import { renderError } from '../ui/renderError';
+import { renderError } from '../utils/renderError';
 
 interface SignUpFormProps {
   title: string;

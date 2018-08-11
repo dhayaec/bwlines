@@ -1,4 +1,4 @@
-import debounce from 'lodash/debounce';
+import debounce from 'lodash-es/debounce';
 import * as React from 'react';
 import { searchJokes } from '../api/random-jokes';
 import RenderJoke from '../blocks/RenderJoke';

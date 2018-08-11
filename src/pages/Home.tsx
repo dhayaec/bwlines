@@ -1,8 +1,10 @@
 import { RouteComponentProps } from '@reach/router';
 import * as React from 'react';
+import { Button } from 'rebass';
 import { getRandomJoke } from '../api/random-jokes';
 import RenderJoke from '../blocks/RenderJoke';
 import HeaderMenu from '../components/HeaderMenu';
+import { Title } from '../components/Title';
 
 interface HomeProps {}
 
@@ -35,6 +37,8 @@ class Home extends React.Component<HomeProps & RouteComponentProps> {
     return (
       <div>
         <HeaderMenu />
+        <Title>Hello World!</Title>
+        <Button>Test Button</Button>
         <h1>Hello</h1>
         <h2>Welcome to my website</h2>
         <button onClick={this.loadJoke}>Refresh</button>

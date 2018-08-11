@@ -10,6 +10,11 @@
     "git.autofetch": true,
     "prettier.eslintIntegration": true,
     "editor.fontSize": 14,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "tslint.autoFixOnSave": true,
+    "cSpell.words": [
+        "formik",
+        "rebass"
+    ]
     //     "emmet.triggerExpansionOnTab": true
-  }
+}
