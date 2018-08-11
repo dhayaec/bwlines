@@ -4,12 +4,7 @@ import HeaderMenu from '../components/HeaderMenu';
 
 interface NotFoundProps {}
 
-interface NotFoundState {}
-
-class NotFound extends React.Component<
-  NotFoundProps & RouteComponentProps,
-  NotFoundState
-> {
+class NotFound extends React.Component<NotFoundProps & RouteComponentProps> {
   public render(): JSX.Element {
     return (
       <div>

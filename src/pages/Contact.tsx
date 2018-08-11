@@ -5,12 +5,7 @@ import SignUpForm from '../forms/SignUpForm';
 
 interface ContactProps {}
 
-interface ContactState {}
-
-class Contact extends React.Component<
-  ContactProps & RouteComponentProps,
-  ContactState
-> {
+class Contact extends React.Component<ContactProps & RouteComponentProps> {
   public render(): JSX.Element {
     return (
       <div>

@@ -14,7 +14,6 @@ class User extends React.PureComponent<UserProps, UserState> {
 
   public render(): JSX.Element {
     const { name } = this.props.user;
-    console.log(`${name} just rendered`);
     return (
       <li>
         <input type="button" value="Delete" onClick={this.onDeleteClick} />

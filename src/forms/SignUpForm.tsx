@@ -7,8 +7,6 @@ interface SignUpFormProps {
   title: string;
 }
 
-interface SignUpFormState {}
-
 interface FormValues {
   email: string;
   password: string;
@@ -21,8 +19,7 @@ const spacing: React.CSSProperties = {
 };
 
 class FormComponent extends React.PureComponent<
-  SignUpFormProps & FormikProps<FormValues>,
-  SignUpFormState
+  SignUpFormProps & FormikProps<FormValues>
 > {
   public render(): JSX.Element {
     const { touched, errors, isSubmitting, title } = this.props;
@@ -70,6 +67,7 @@ const SignUpForm = withFormik<SignUpFormProps, FormValues>({
   }),
 
   handleSubmit: async values => {
+    // tslint:disable-next-line:no-console
     console.log(values);
   },
 })(FormComponent);

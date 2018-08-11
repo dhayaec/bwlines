@@ -4,12 +4,7 @@ import HeaderMenu from '../components/HeaderMenu';
 
 interface AboutProps {}
 
-interface AboutState {}
-
-class About extends React.Component<
-  AboutProps & RouteComponentProps,
-  AboutState
-> {
+class About extends React.Component<AboutProps & RouteComponentProps> {
   public render(): JSX.Element {
     return (
       <div>

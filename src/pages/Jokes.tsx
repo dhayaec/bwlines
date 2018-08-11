@@ -4,9 +4,11 @@ import { getRandomJoke } from '../api/random-jokes';
 import RenderJoke from '../blocks/RenderJoke';
 import HeaderMenu from '../components/HeaderMenu';
 
-interface HomeProps {}
+interface JokesProps {
+  categoryName?: string;
+}
 
-class Home extends React.Component<HomeProps & RouteComponentProps> {
+class Jokes extends React.Component<JokesProps & RouteComponentProps> {
   state = {
     joke: {} as JokeResponse,
     loading: false,
@@ -15,8 +17,9 @@ class Home extends React.Component<HomeProps & RouteComponentProps> {
   isCancelled = false;
 
   loadJoke = async () => {
+    const { categoryName } = this.props;
     this.setState({ loading: true });
-    const joke = await getRandomJoke();
+    const joke = await getRandomJoke({ category: categoryName });
     if (!this.isCancelled) {
       this.setState({ joke, loading: false });
     }
@@ -24,6 +27,7 @@ class Home extends React.Component<HomeProps & RouteComponentProps> {
 
   async componentDidMount() {
     await this.loadJoke();
+    this.setState({ loading: false });
   }
 
   componentWillUnmount() {
@@ -31,17 +35,18 @@ class Home extends React.Component<HomeProps & RouteComponentProps> {
   }
 
   public render(): JSX.Element {
+    const { categoryName = '' } = this.props;
     const { joke, loading } = this.state;
     return (
       <div>
         <HeaderMenu />
-        <h1>Hello</h1>
-        <h2>Welcome to my website</h2>
+        <h1>Jokes</h1>
         <button onClick={this.loadJoke}>Refresh</button>
+        <p>{categoryName}</p>
         <RenderJoke joke={joke} loading={loading} />
       </div>
     );
   }
 }
 
-export default Home;
+export default Jokes;

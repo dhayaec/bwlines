@@ -17,12 +17,7 @@ interface ProductProps {
   productId?: string;
 }
 
-interface ProductState {}
-
-class Product extends React.Component<
-  ProductProps & RouteComponentProps,
-  ProductState
-> {
+class Product extends React.Component<ProductProps & RouteComponentProps> {
   public render(): JSX.Element {
     const { productId = 0 } = this.props;
     const {
