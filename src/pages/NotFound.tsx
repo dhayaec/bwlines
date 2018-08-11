@@ -15,6 +15,7 @@ class NotFound extends React.Component<
       <div>
         <HeaderMenu />
         <h1>Page Not Found</h1>
+        <p>This page does not exist</p>
       </div>
     );
   }
