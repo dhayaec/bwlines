@@ -64,6 +64,8 @@
       "allow-leading-underscore"
     ],
     // tslint-react
-    "jsx-no-lambda": true
+    "jsx-no-lambda": true,
+    "object-curly-spacing": true,
+    "import-spacing": true
   }
 }
