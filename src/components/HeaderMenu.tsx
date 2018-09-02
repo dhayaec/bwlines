@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { NavItem } from 'rebass';
 import NavLink from '../ui/NavLink';
 import SearchBox from './SearchBox';
 
@@ -41,7 +42,9 @@ class HeaderMenu extends React.PureComponent<HeaderMenuProps, HeaderMenuState> {
         <ul style={{ listStyle: 'inline' }}>
           {links.map(item => (
             <li key={item.id}>
-              <NavLink to={item.link} children={item.name} />
+              <NavItem>
+                <NavLink to={item.link} children={item.name} />
+              </NavItem>
             </li>
           ))}
         </ul>

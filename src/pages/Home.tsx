@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router';
 import * as React from 'react';
-import { Button } from 'rebass';
+import { Avatar, Button, NavItem } from 'rebass';
 import { getRandomJoke } from '../api/random-jokes';
 import RenderJoke from '../blocks/RenderJoke';
 import HeaderMenu from '../components/HeaderMenu';
@@ -39,6 +39,11 @@ class Home extends React.Component<HomeProps & RouteComponentProps> {
         <HeaderMenu />
         <Title>Hello World!</Title>
         <Button>Test Button</Button>
+        <Avatar
+          size={32}
+          src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20"
+        />
+        <NavItem children="Hello" />
         <h1>Hello</h1>
         <h2>Welcome to my website</h2>
         <button onClick={this.loadJoke}>Refresh</button>

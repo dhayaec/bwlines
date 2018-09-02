@@ -1,6 +1,6 @@
-import {Router} from '@reach/router';
+import { Router } from '@reach/router';
 import * as React from 'react';
-import {Provider} from 'rebass';
+import { Provider } from 'rebass';
 import About from './pages/About';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
