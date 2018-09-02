@@ -12,7 +12,7 @@ class RenderCategories extends React.PureComponent<RenderCategoriesProps> {
     if (loading) {
       return <p>Loading...</p>;
     }
-    if (categories.length) {
+    if (categories.length > 0) {
       return (
         <div>
           <ul>
