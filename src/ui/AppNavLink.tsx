@@ -1,7 +1,7 @@
 import { Link, LinkGetProps } from '@reach/router';
 import * as React from 'react';
 
-class NavLink extends React.PureComponent<any> {
+class AppNavLink extends React.PureComponent<any> {
   getProps = ({ isPartiallyCurrent, isCurrent, href }: LinkGetProps) => {
     const current = href === '/' ? isCurrent : isPartiallyCurrent;
     return {
@@ -16,4 +16,4 @@ class NavLink extends React.PureComponent<any> {
   }
 }
 
-export default NavLink;
+export default AppNavLink;
