@@ -12,7 +12,12 @@
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   "tslint.autoFixOnSave": true,
-  "cSpell.words": ["formik", "normalizr"],
+  "cSpell.words": [
+    "bwlines",
+    "formik",
+    "normalizr",
+    "reakit"
+  ],
   "editor.formatOnSave": true
   //     "emmet.triggerExpansionOnTab": true
 }

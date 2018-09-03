@@ -8,8 +8,6 @@ import { Title } from '../components/Title';
 
 interface HomeProps {}
 
-//hgh
-
 const ButtonRounded = styled(Button)`
   border-radius: 1.25em;
   padding: 0 1.375em;
